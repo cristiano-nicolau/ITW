@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <div class="border-bottom pb-2 mb-2">
+            <h2><i class="fa fa-calculator"></i>Calculadora</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input id="op1" type="number" value="2" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <select id="operacao" onchange="getOperacao()" class="form-select">
+                    <option value="+" selected>soma</option>
+                    <option value="-">subtraçao</option>
+                    <option value="*">multiplicaçao</option>
+                    <option value=":">devisao</option>
+                    <option value="%">resto da divisao</option>
+                    <option value="!">fatorial</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <input id="op2" type="number" value="3" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <input id="res" value="" class="form-control" />
+            </div>
+        </div>
+        <hr />
+        <div class="text-center">
+            <button onclick="calcula()" class="btn btn-primary">Calcula</button>
+        </div>
+    </div>
+
+    <script src="../lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
